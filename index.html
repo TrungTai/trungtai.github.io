@@ -1,16 +1,128 @@
 <html>
 <head>
-	<title>Tai Ca Koi</title>
+	<title>Hom nay lam gi</title>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+	<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+	
+	<script src="js/list-questions.js"></script>
+	<script src="js/list-courses.js"></script>
+	<script src="js/list-breakfast-foods.js"></script>
+	<script src="js/list-lunch-foods.js"></script>
+	<script src="js/list-dinner-foods.js"></script>
+	<script src="js/list-weekend-activities.js"></script>
+	<link href="css/button.css" rel="stylesheet"/>
+	
+	<style>
+		@font-face {
+			font-family: myMarckScriptRegular;
+			src: url(fonts/MarckScript-Regular.ttf);
+		}
+
+        ol {
+          counter-reset: li; 
+          list-style: none; 
+          padding: 0;
+          text-shadow: 0 1px 0 rgba(255,255,255,.5);
+        }
+        
+        ol a {
+          position: relative;
+          display: block;
+          padding: .4em .4em .4em 2em;
+          margin: .5em 0;
+          background: #DAD2CA;
+          color: #444;
+          text-decoration: none;
+          border-radius: .3em;
+          transition: .3s ease-out;
+        }
+        
+        ol a:hover { background: #E9E4E0; }
+        ol a:hover:before { transform: rotate(360deg); }
+        ol a:before {
+          content: counter(li);
+          counter-increment: li;
+          position: absolute;
+          left: -1.3em;
+          top: 50%;
+          margin-top: -1.3em;
+          background: #f9dd94;
+          height: 2em;
+          width: 2em;
+          line-height: 2em;
+          border: .3em solid #fff;
+          text-align: center;
+          font-weight: bold;
+          border-radius: 2em;
+          transition: all .3s ease-out;
+        }
+	</style>
 </head>
 
 <body>
-	<div>
-		<h3>Xin chào mọi người, mình là Tài.</h3>
-		<h3>Đây là trang web riêng đầu tiên của mình sau hơn chục năm đi làm lập trình.</h3>
-		<h3>Mừng muốn rơi nước mắt :'(</h3>
+	<div id="main">
+		<div style="margin:auto; width: fit-content;">
+			<img src="assets/thinking.png" style="width: 250px;"/>
+		</div>
+		<div style="margin:auto; width: fit-content;">
+			<select id="listQuestions">
+			</select>
+			
+			<button id="suggest" class="custom-btn btn-2" style="width:70px; height:25px; padding:0;" onclick="suggest()">Gợi ý</button>
+		</div>
+		<div style="margin: auto; padding-top: 10px; width: 90%;">
+			<ol id="listResults">
+				<li><a>ABC</a></li>
+			</ol>
+		</div>
+		
 	</div>
-	<div>
-		<img src="inzaghi.jpg" alt="Idol của mình">
-	</div>
+	
+	<script>
+		function suggest() {
+			let selected = $("#listQuestions").chosen().val();
+			let results;
+			switch(selected) {
+				case "question001":
+					results = getListCourses();
+					break;
+				case "question002":
+					results = getListBreakfastFoods();
+					break;
+				case "question003":
+					results = getListLunchFoods();
+					break;
+				case "question004":
+					results = getListDinnerFoods();
+					break;
+				case "question005":
+					results = getListWeekendActivities();
+					break;
+				default:
+					results = getListQuestions();
+			}
+			
+			let ol = document.getElementById("listResults");
+			$("#listResults").empty();
+			for (index in results) {
+				let li = document.createElement("li");
+				li.innerHTML = "<a>" + results[index] + "</a>";
+				ol.appendChild(li);
+			}
+		}
+
+		const questions = getListQuestions();
+		var select = document.getElementById("listQuestions");
+		for (index in questions) {
+			select.options[select.options.length] = new Option(questions[index], index);
+		}
+
+		$("#listQuestions").chosen({
+			no_results_text: "Không tìm thấy kết quả phù hợp!",
+			width: "200px"
+		})
+	</script>
 </body>
 </html>

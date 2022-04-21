@@ -1,0 +1,32 @@
+function getListWeekendActivities() {
+    const weekendActivities = {
+        weekendActivity001: "Xem phim",
+        weekendActivity002: "Ăn ốc",
+        weekendActivity003: "Ăn gà rán",
+        weekendActivity004: "Tụ tập ăn uống",
+        weekendActivity005: "Ăn kem",
+        weekendActivity006: "Đi du lịch",
+        weekendActivity007: "Đi chơi công viên",
+        weekendActivity008: "Thả diều",
+        weekendActivity009: "Chơi thể thao",
+        weekendActivity010: "Chơi game",
+        weekendActivity011: "Đọc sách",
+        weekendActivity012: "Câu cá",
+        weekendActivity013: "Đi cà phê",
+        weekendActivity014: "Họp nhóm",
+        weekendActivity015: "Chụp hình",
+        weekendActivity016: "Hát karaoke",
+        weekendActivity017: "Làm gốm",
+        weekendActivity018: "Vẽ tranh",
+        weekendActivity019: "Bắn súng sơn",
+        weekendActivity020: "Leo núi",
+        weekendActivity021: "Đi bơi",
+        weekendActivity022: "Đi dã ngoại",
+        weekendActivity023: "Đi siêu thị, trung tâm thương mại",
+        weekendActivity024: "Mua sắm",
+        weekendActivity025: "Lang thang đường sách",
+        weekendActivity026: "Thư giãn tại spa, massage",
+        weekendActivity027: "Thưởng thức ẩm thực của các nước",
+    };
+    return weekendActivities;
+}

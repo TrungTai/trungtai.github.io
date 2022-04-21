@@ -1,0 +1,30 @@
+function getListLunchFoods() {
+    const lunchFoods = {
+        lunchFood001: "Các món cơm trưa",
+        lunchFood002: "Cơm sườn, cơm tấm",
+        lunchFood003: "Cơm rang dưa bò",
+        lunchFood004: "Cơm trộn Hàn Quốc",
+        lunchFood005: "Cơm gà xối mỡ",
+        lunchFood006: "Bún bò Huế",
+        lunchFood007: "Bún thịt nướng",
+        lunchFood008: "Bún đậu mắm tôm",
+        lunchFood009: "Bún riêu cua",
+        lunchFood010: "Bánh canh cua",
+        lunchFood011: "Bún chả",
+        lunchFood012: "Mì Ý",
+        lunchFood013: "Mì Quảng",
+        lunchFood014: "Mì ốc hến",
+        lunchFood015: "Bánh canh bò viên",
+        lunchFood016: "Bánh canh cá lóc",
+        lunchFood017: "Cháo ếch",
+        lunchFood018: "Cháo sườn",
+        lunchFood019: "Bánh xèo",
+        lunchFood020: "Hủ tiếu",
+        lunchFood021: "Miếng măng gà",
+        lunchFood022: "Bò kho + bánh mì",
+        lunchFood023: "Bột chiên",
+        lunchFood024: "Bánh mì thịt",
+        lunchFood025: "Gà rán",
+    };
+    return lunchFoods;
+}
