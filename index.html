@@ -2,9 +2,12 @@
 <head>
 	<title>Hom nay lam gi</title>
 	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 	<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 	
 	<script src="js/list-questions.js"></script>
 	<script src="js/list-courses.js"></script>
@@ -58,23 +61,36 @@
           border-radius: 2em;
           transition: all .3s ease-out;
         }
+
+		.chosen-container-single .chosen-single {
+			height: 40px;
+			line-height: 40px;
+			font-size: 20px;
+			margin-top: -4px;
+		}
+		.chosen-container-single .chosen-single div b {
+			background-position: 2px 10px;
+		}
+		.chosen-container-active.chosen-with-drop .chosen-single div b {
+			background-position: -16px 10px;
+		}
 	</style>
 </head>
 
 <body>
 	<div id="main">
 		<div style="margin:auto; width: fit-content;">
-			<img src="assets/thinking.png" style="width: 250px;"/>
+			<img src="assets/thinking.png"/>
 		</div>
 		<div style="margin:auto; width: fit-content;">
 			<select id="listQuestions">
 			</select>
 			
-			<button id="suggest" class="custom-btn btn-2" style="width:70px; height:25px; padding:0;" onclick="suggest()">Gợi ý</button>
+			<button id="suggest" class="custom-btn btn-2" style="font-size: 18px;" onclick="suggest()">Gợi ý</button>
 		</div>
 		<div style="margin: auto; padding-top: 10px; width: 90%;">
 			<ol id="listResults">
-				<li><a>ABC</a></li>
+				<!-- <li><a>ABC</a></li> -->
 			</ol>
 		</div>
 		
@@ -121,7 +137,7 @@
 
 		$("#listQuestions").chosen({
 			no_results_text: "Không tìm thấy kết quả phù hợp!",
-			width: "200px"
+			width: "300px"
 		})
 	</script>
 </body>
