@@ -18,6 +18,10 @@
 	<link href="css/button.css" rel="stylesheet"/>
 	
 	<style>
+		* {
+			font-size: 20px;
+		}
+
 		@font-face {
 			font-family: myMarckScriptRegular;
 			src: url(fonts/MarckScript-Regular.ttf);
@@ -65,7 +69,6 @@
 		.chosen-container-single .chosen-single {
 			height: 40px;
 			line-height: 40px;
-			font-size: 20px;
 			margin-top: -4px;
 		}
 		.chosen-container-single .chosen-single div b {
@@ -86,7 +89,7 @@
 			<select id="listQuestions">
 			</select>
 			
-			<button id="suggest" class="custom-btn btn-2" style="font-size: 18px;" onclick="suggest()">Gợi ý</button>
+			<button id="suggest" class="custom-btn btn-2" onclick="suggest()">Gợi ý</button>
 		</div>
 		<div style="margin: auto; padding-top: 10px; width: 90%;">
 			<ol id="listResults">
