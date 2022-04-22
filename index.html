@@ -18,10 +18,20 @@
 	<link href="css/button.css" rel="stylesheet"/>
 	
 	<style>
-		* {
-			font-size: 20px;
+		body {
+			font-size: 100%;
+		}
+		#suggest {
+			font-size: 1.3em;
+			width: 8em;
+			height: 2.5em;
+			
 		}
 
+		#listResults {
+			font-size: 1.3em;
+		}
+		
 		@font-face {
 			font-family: myMarckScriptRegular;
 			src: url(fonts/MarckScript-Regular.ttf);
@@ -67,9 +77,10 @@
         }
 
 		.chosen-container-single .chosen-single {
-			height: 40px;
-			line-height: 40px;
+			height: 2.5em;
+			line-height: 2.5em;
 			margin-top: -4px;
+			font-size: 1.3em;
 		}
 		.chosen-container-single .chosen-single div b {
 			background-position: 2px 10px;
@@ -140,7 +151,7 @@
 
 		$("#listQuestions").chosen({
 			no_results_text: "Không tìm thấy kết quả phù hợp!",
-			width: "300px"
+			width: "25em"
 		})
 	</script>
 </body>
