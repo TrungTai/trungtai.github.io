@@ -1,12 +1,12 @@
 function getListQuestions() {
-    const questions = {
-        question001: "Hôm nay ăn gì ?",
-        question002: "Sáng nay ăn gì ?",
-        question003: "Trưa nay ăn gì ?",
-        question004: "Tối nay ăn gì ?",
-        question005: "Cuối tuần ăn chơi gì ?"
+    const items = {
+        item001: "Hôm nay ăn gì ?",
+        item002: "Sáng nay ăn gì ?",
+        item003: "Trưa nay ăn gì ?",
+        item004: "Tối nay ăn gì ?",
+        item005: "Cuối tuần ăn chơi gì ?"
     };
-    return questions;
+    return items;
 }
 
 

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hom nay lam gi</title>
+	<title>Các Câu Hỏi Thường Gặp</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	
 	<script src="js/list-questions.js"></script>
-	<script src="js/list-courses.js"></script>
+	<script src="js/list-dishes.js"></script>
 	<script src="js/list-breakfast-foods.js"></script>
 	<script src="js/list-lunch-foods.js"></script>
 	<script src="js/list-dinner-foods.js"></script>
 	<script src="js/list-weekend-activities.js"></script>
-	<link href="css/button.css" rel="stylesheet"/>
 	
 	<style>
-		@font-face {
+		/* @font-face {
 			font-family: myMarckScriptRegular;
 			src: url(fonts/MarckScript-Regular.ttf);
-		}
+		} */
 
         ol {
           counter-reset: li; 
@@ -48,54 +48,44 @@
           counter-increment: li;
           position: absolute;
           left: -1.3em;
-          top: 50%;
+          top: 60%;
           margin-top: -1.3em;
           background: #f9dd94;
           height: 2em;
           width: 2em;
-          line-height: 2em;
+          line-height: 1.3em;
           border: .3em solid #fff;
           text-align: center;
           font-weight: bold;
           border-radius: 2em;
           transition: all .3s ease-out;
         }
-
 		
 	</style>
 </head>
 
 <body>
 	<div class="container mt-1">
-		<div class="row">
-			<div class="col-2 col-sm-3 col-md-4 col-xl-5"></div>
-			<div class="col-8 col-sm-6 col-md-4 col-xl-2">
-				<img src="assets/thinking.png" class="img-thumbnail" style="width: 100%;"/>
-			</div>
-			<div class="col-2 col-sm-3 col-md-4 col-xl-5"></div>
-		</div>
+		<img src="assets/thinking.png" class="mx-auto d-block img-fluid" style="width: 200px;" alt="Thinking"/>
 		
 		<div class="row">
 			<div class="col-1 col-md-2 col-lg-3"></div>
 			<div class="col-10 col-md-8 col-lg-6" style="display: flex;">
-				<select id="listQuestions" class="form-select" style="width: 80%;margin: 2px;" aria-label="Default select example">
-				</select>
-				<button id="suggest" type="button" class="btn btn-primary" style="width: 20%;margin: 2px;" onclick="suggest()">Gợi ý</button>
+				<select id="listQuestions" class="form-select" style="width: 80%;margin: 2px;"></select>
+				<button type="button" class="btn btn-primary" style="width: 20%;margin: 2px;" onclick="suggest()">Gợi ý</button>
 			</div>
 			<div class="col-1 col-md-2 col-lg-3"></div>
 		</div>
 
-		<div class="row"></div>	
-			<div class="col-1 col-md-2 col-lg-3"></div>
-			<div class="col-10 col-md-8 col-lg-6" >
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col-10" >
 				<ol id="listResults" class="list-group">
 					<!-- <li><a>ABC</a></li> -->
 				</ol>
 			</div>
-			<div class="col-1 col-md-2 col-lg-3"></div>
-			
+			<div class="col-1"></div>
 		</div>
-		
 		
 	</div>
 	
@@ -104,19 +94,19 @@
 			let selected = $("#listQuestions").val();
 			let results;
 			switch(selected) {
-				case "question001":
-					results = getListCourses();
+				case "item001":
+					results = getListDishes();
 					break;
-				case "question002":
+				case "item002":
 					results = getListBreakfastFoods();
 					break;
-				case "question003":
+				case "item003":
 					results = getListLunchFoods();
 					break;
-				case "question004":
+				case "item004":
 					results = getListDinnerFoods();
 					break;
-				case "question005":
+				case "item005":
 					results = getListWeekendActivities();
 					break;
 				default:
@@ -137,7 +127,6 @@
 		for (index in questions) {
 			select.options[select.options.length] = new Option(questions[index], index);
 		}
-
 		
 	</script>
 </body>
