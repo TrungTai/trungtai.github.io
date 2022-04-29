@@ -14,6 +14,7 @@ function getListLunchFoods() {
         "Mì Ý",
         "Mì Quảng",
         "Mì ốc hến",
+        "Mì gói",
         "Bánh canh bò viên",
         "Bánh canh cá lóc",
         "Cháo ếch",
